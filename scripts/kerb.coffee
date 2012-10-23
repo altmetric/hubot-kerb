@@ -7,7 +7,7 @@
 #   None
 #
 # Commands:
-#   hubot what's on eat.st
+#   hubot what's on kerb
 
 jsdom = require "jsdom"
 
