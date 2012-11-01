@@ -18,8 +18,10 @@ module.exports = (robot) ->
     jsdom.env url, [ "http://code.jquery.com/jquery-1.5.min.js" ], (errors, window) ->
       d = new Date();
       day = d.getDate()
-      day = (day < 10 ? '0' : '') + number
-      formatted_date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + day
+      day = (day < 10 ? '0' : '') + day
+      month  = (d.getMonth() + 1)
+      month = (month < 10 ? '0' : '') + month
+      formatted_date = d.getFullYear() + "-" + month + "-" + day
       traders = window.$("#date-"+formatted_date+" ul li div.rota_content")
       message_str = "\n"
       traders.each (index, element) =>
