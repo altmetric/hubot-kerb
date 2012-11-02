@@ -18,7 +18,7 @@ module.exports = (robot) ->
     jsdom.env url, [ "http://code.jquery.com/jquery-1.5.min.js" ], (errors, window) ->
       trader_panel = window.$(".panel")[1]
       msg.send window.$(trader_panel).children("p").text()
-  
+
   robot.respond /what\'s on kerb/i, (msg) ->
     url = "http://www.kerbfood.com/kings-cross/"
 
