@@ -68,16 +68,16 @@ module.exports = (robot) ->
       msg.send window.$(trader_panel).children("p").text()
 
   robot.respond /what(\')?s on kerb (on|next)?(.*)/i, (msg) ->
-    if msg.match[3] is 'tomorrow'
+    day_of_week = msg.match[3].replace(/[ \?]/g,'')
+    if day_of_week is 'tomorrow'
       today = new Date()
       day_of_week = days_of_week[today.getDay() + 1]
       displayTradersForDay(msg, false, day_of_week)
     else
       next_week = msg.match[2] == 'next'
-      day_of_week = msg.match[3].replace(' ','')
       day_of_week = day_of_week.charAt(0).toUpperCase() + day_of_week.slice(1)
       displayTradersForDay(msg, next_week, day_of_week)
 
-  robot.respond /what(\')?s on kerb$/i, (msg) ->
+  robot.respond /what(\')?s on kerb\??$/i, (msg) ->
     formatted_date = formatDate(new Date())
     tradersOnDate(msg, formatted_date)
