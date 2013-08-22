@@ -16,6 +16,7 @@
 jsdom = require "jsdom"
 
 days_of_week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+kerb_alternatives = ["Pret", "Wasabi", "Benito's Hat", "Burrito Café", "Kiosk"]
 
 getDate = (next_week, day_of_week_str) ->
   today = new Date()
@@ -52,7 +53,8 @@ tradersOnDate = (msg, formatted_date) ->
       message_str += "  " + trader_desc + "\n"
 
     if message_str is "Traders for " + formatted_date + "\n"
-      message_str = 'No traders found for ' + formatted_date + ', you might have to risk the canteen :('
+      kerb_alternative = kerb_alternatives[Math.floor(Math.random()*kerb_alternatives.length)]
+      message_str = 'No traders found for ' + formatted_date + ', how about heading to ' + kerb_alternative + '?'
 
     msg.send message_str
 
