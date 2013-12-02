@@ -2,6 +2,7 @@
 #   Make hubot list what tasty treats are available at Kerb Kings Cross (eat.st)
 #
 # Dependencies:
+#   None
 #
 # Configuration:
 #   None
