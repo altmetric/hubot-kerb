@@ -1,11 +1,5 @@
 # Description:
-#   Make hubot list what tasty treats are available at Kerb Kings Cross (eat.st)
-#
-# Dependencies:
-#   None
-#
-# Configuration:
-#   None
+#   A Hubot script to check what's on KERB Kings Cross
 #
 # Commands:
 #   hubot what's on kerb
@@ -16,8 +10,8 @@
 
 jsdom = require "jsdom"
 
-days_of_week = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
-kerb_alternatives = ["Pret", "Wasabi", "Benito's Hat", "Burrito Café", "Kiosk"]
+days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+kerb_alternatives = ["Pret", "Wasabi", "Benito's Hat", "Giraffe", "Gran Sasso", "Kiosk", "Pizza Union", "Abokado", "Honest Burger"]
 
 getDate = (next_week, day_of_week_str) ->
   today = new Date()
