@@ -23,15 +23,14 @@ Then add **hubot-kerb** to your `external-scripts.json`:
 
 ```console
 Hubot> hubot what's on kerb?
-Hubot> Traders for 2015-10-28
-Luardos
-  The original burrito boy. Deep in the game, ain't coming out any time soon. (luardos)
-Stakehaus
-  Home to great steaks (stakehaus)
-Vinn Goute - Seychelles Kitchen
-  Never had Seychelles cooking before? You're in for a treat. (vinn-goute)
-Well Kneaded
-  Pizza wagon on a mission (well-kneaded)
+Hubot> Luardos (http://www.kerbfood.com/traders/luardos/)
+  The original burrito boy. Deep in the game, ain't coming out any time soon.
+Stakehaus (http://www.kerbfood.com/traders/stakehaus/)
+  Home to great steaks
+Vinn Goute - Seychelles Kitchen (http://www.kerbfood.com/traders/vinn-goute/)
+  Never had Seychelles cooking before? You're in for a treat.
+Well Kneaded (http://www.kerbfood.com/traders/well-kneaded/)
+  Pizza wagon on a mission
 ```
 
 ## Acknowledgements

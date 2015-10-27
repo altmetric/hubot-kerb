@@ -12,5 +12,8 @@ describe 'kerb', ->
 
     require('../src/kerb')(@robot)
 
-  it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/what(\')?s on kerb (on|next)?(.*)/i)
+  it 'registers a respond listener for today', ->
+    expect(@robot.respond).to.have.been.calledWith(/what'?s on kerb\??$/i)
+
+  it 'registers a respond listener for other dates', ->
+    expect(@robot.respond).to.have.been.calledWith(/what'?s on kerb (.+)\??/i)
