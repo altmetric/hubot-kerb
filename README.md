@@ -1,7 +1,6 @@
 # hubot-kerb
 
-A Hubot script to check what's on [KERB King's
-Cross](http://www.kerbfood.com/kings-cross/).
+A Hubot script to check what's on [KERB](http://www.kerbfood.com/).
 
 See [`src/kerb.coffee`](src/kerb.coffee) for full documentation.
 
@@ -18,6 +17,13 @@ Then add **hubot-kerb** to your `external-scripts.json`:
   "hubot-kerb"
 ]
 ```
+
+## Configuration
+
+hubot-kerb is configured by a single environment variable:
+
+* `KERB_URL` - optional, the URL to scrape for KERB traders. Default:
+  http://www.kerbfood.com/kings-cross/
 
 ## Usage
 
