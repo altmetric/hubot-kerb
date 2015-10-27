@@ -30,7 +30,11 @@ module.exports = (robot) ->
 
   robot.respond /what'?s on kerb (.+)\??/i, (res) ->
     date = chrono.parseDate(res.match[1])
-    tradersForDate(date, res)
+
+    if date
+      tradersForDate(date, res)
+    else
+      res.send 'Sorry, I didn\'t understand that date. Try something like "what\'s on kerb tomorrow?" or "what\'s on kerb on Thursday?"'
 
   tradersForDate = (date, res) ->
     dateId = "#date-#{ date.toISOString().slice(0, 10) }"
