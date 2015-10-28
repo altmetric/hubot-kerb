@@ -1,4 +1,4 @@
-# hubot-kerb
+# hubot-kerb [![Build Status](https://travis-ci.org/altmetric/hubot-kerb.svg?branch=master)](https://travis-ci.org/altmetric/hubot-kerb)
 
 A Hubot script to check what's on [KERB](http://www.kerbfood.com/).
 
