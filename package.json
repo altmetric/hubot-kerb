@@ -1,7 +1,7 @@
 {
   "name": "hubot-kerb",
   "description": "A Hubot script to check what's on KERB",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Altmetric <infrastructure@altmetric.com>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts",
