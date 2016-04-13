@@ -6,13 +6,8 @@ expect = require('chai').expect
 
 helper = new Helper('../src/kerb.coffee')
 
-describe 'codenames', ->
+describe 'kerb', ->
   beforeEach ->
-    nock('http://codenames.clivemurray.com')
-      .get('/data/prefixes.json')
-      .reply(200, [{title: 'black', attributes: ['colour']}])
-      .get('/data/animals.json')
-      .reply(200, [{title: 'bat', attributes: ['air', 'mammal']}])
     @room = helper.createRoom(httpd: false)
 
   afterEach ->
