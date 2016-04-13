@@ -64,11 +64,11 @@ describe 'kerb', ->
         .get('/kings-cross/')
         .reply(200, fs.readFileSync(path.join(__dirname, '/fixtures/kings-cross.html')))
 
-      @room.user.say 'alice', 'hubot whats on kerb on 2015-10-28?'
+      @room.user.say 'alice', 'hubot what’s on kerb on 2015-10-28?'
       setTimeout done, 100
 
     it 'responds with the traders for that date', ->
       expect(@room.messages).to.eql [
-        ['alice', 'hubot whats on kerb on 2015-10-28?'],
+        ['alice', 'hubot what’s on kerb on 2015-10-28?'],
         ['hubot', 'Luardos (http://www.kerbfood.com/traders/luardos/)\n  The original burrito boy. Deep in the game, ain\'t coming out any time soon.\nStakehaus (http://www.kerbfood.com/traders/stakehaus/)\n  Home to great steaks\nVinn Goute - Seychelles Kitchen (http://www.kerbfood.com/traders/vinn-goute/)\n  Never had Seychelles cooking before? You\'re in for a treat.\nWell Kneaded (http://www.kerbfood.com/traders/well-kneaded/)\n  Pizza wagon on a mission']
       ]

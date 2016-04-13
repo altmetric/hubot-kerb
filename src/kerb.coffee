@@ -25,10 +25,10 @@ chrono = require 'chrono-node'
 kerbUrl = process.env.KERB_URL or 'http://www.kerbfood.com/kings-cross/'
 
 module.exports = (robot) ->
-  robot.respond /what'?s on kerb\??$/i, (res) ->
+  robot.respond /what['’]?s on kerb\??$/i, (res) ->
     tradersForDate(new Date(), res)
 
-  robot.respond /what'?s on kerb (.+)\??/i, (res) ->
+  robot.respond /what['’]?s on kerb (.+)\??/i, (res) ->
     date = chrono.parseDate(res.match[1])
 
     if date
